@@ -1,0 +1,163 @@
+.grid-background {
+    background-image:
+        linear-gradient(to right, #2B3935 1px, transparent 1px),
+        linear-gradient(to bottom, #2B3935 1px, transparent 1px);
+
+    background-size: 52px 52px;
+
+    mask-image: linear-gradient(to bottom,
+            black 0%,
+            black 80%,
+            transparent 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.light-ray {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.light-ray::before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 200%;
+    top: -50%;
+    left: 20%;
+    background: linear-gradient(to right,
+            transparent,
+            rgba(100, 255, 190, 0.1),
+            transparent);
+    transform: rotate(40deg);
+    animation: move-ray 8s linear infinite;
+}
+
+@keyframes move-ray {
+    from {
+        left: -65%;
+    }
+
+    to {
+        left: 130%;
+    }
+}
+
+.navbar-btn {
+    position: relative;
+    cursor: pointer;
+    color: var(--color-text);
+}
+
+.navbar-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-highlights);
+    transition: width 0.3s ease;
+}
+
+.navbar-btn:hover {
+    color: var(--color-highlights);
+}
+
+.navbar-btn:hover::after {
+    width: 80%;
+
+}
+
+/* hide the native cursor on devices with a real mouse */
+@media (hover: hover) and (pointer: fine) {
+
+    body,
+    a,
+    button,
+    [data-cursor-hover] {
+        cursor: none;
+    }
+}
+
+.cursor-dot,
+.cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    will-change: transform;
+}
+
+/* tiny dot = the actual cursor */
+.cursor-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--color-primary);
+    transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+}
+
+.cursor-dot.hover {
+    width: 4px;
+    height: 4px;
+}
+
+/* big ring = the follower */
+.cursor-ring {
+    width: 32px;
+    height: 32px;
+    border: 1.5px solid var(--color-primary);
+    background: rgba(103, 232, 249, 0.04);
+    transition:
+        width 0.25s ease,
+        height 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+
+@media (hover: none),
+(pointer: coarse) {
+
+    .cursor-dot,
+    .cursor-ring {
+        display: none;
+    }
+}
+
+/* text type */
+.text-type {
+    display: inline-block;
+    white-space: pre-wrap;
+}
+
+.text-type__cursor {
+    margin-left: 0.25rem;
+    display: inline-block;
+    opacity: 1;
+}
+
+.text-type__cursor--hidden {
+    display: none;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}

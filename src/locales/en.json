@@ -1,0 +1,220 @@
+{
+    "navbar": {
+        "home": "Home",
+        "about": "About",
+        "experience": "Experience",
+        "skills": "Skills",
+        "projects": "Projects"
+    },
+    "hero": {
+        "available": "Available for Opportunities",
+        "greeting": "Hi, I'm",
+        "name": "Fathimathul Raifa",
+        "roles": [
+            "Full Stack Developer",
+            "Frontend Developer",
+            "Backend Developer"
+        ],
+        "descriptionStart": "I turn",
+        "complexIdeas": "complex ideas",
+        "descriptionMiddle": "into fast, scalable web apps, from pixel-perfect interfaces to",
+        "smartBackends": "smart, reliable backends",
+        "descriptionEnd": ".",
+        "resume": "Download Resume",
+        "contact": "Get in Touch",
+        "location": "Based in Dubai, UAE"
+    },
+    "about": {
+        "label": "01 / ABOUT ME",
+        "headingStart": "More than just",
+        "headingHighlight": "code.",
+        "subtitle": "A developer who enjoys turning ideas into meaningful digital experiences.",
+        "introLabel": "A LITTLE ABOUT MYSELF",
+        "greeting": "Hi, I'm",
+        "name": "Fathimathul Raifa",
+        "tagline": "A developer driven by curiosity and a passion for building things that work beautifully.",
+        "paragraph1": "I focus on developing modern web applications that combine intuitive user interfaces with efficient backend functionality. I enjoy working across the development stack, from creating responsive interfaces to implementing APIs and managing application data.",
+        "paragraph2": "I value clean code, maintainable architecture, performance, and thoughtful user experiences. My approach to development combines analytical thinking, attention to detail, and a commitment to continuous learning.",
+        "paragraph3": "I'm interested in contributing to meaningful projects, collaborating with other developers, and building software that solves real-world problems.",
+        "skills": [
+            "Frontend Development",
+            "Backend Development",
+            "Responsive Design",
+            "Problem Solving"
+        ],
+        "strengths": [
+            {
+                "title": "Clean Code",
+                "description": "Writing maintainable, reusable, and efficient code with attention to detail."
+            },
+            {
+                "title": "Full Stack Thinking",
+                "description": "Connecting intuitive user interfaces with reliable backend systems."
+            },
+            {
+                "title": "Problem Solving",
+                "description": "Breaking complex challenges into practical, scalable solutions."
+            },
+            {
+                "title": "Always Improving",
+                "description": "Learning new technologies and continuously refining my skills."
+            }
+        ]
+    },
+    "skills": {
+        "label": "02 / SKILLS",
+        "headingStart": "Tools I",
+        "headingHighlight": "build with.",
+        "subtitle": "The languages, frameworks, and tools I use to take an idea from interface to database to deployment.",
+        "groups": {
+            "languages": "Languages",
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "databases": "Databases",
+            "tools": "Tools & Platforms",
+            "ai": "AI / ML",
+            "practices": "Practices"
+        }
+    },
+    "experience": {
+        "label": "03 / EXPERIENCE",
+        "headingStart": "Where I've",
+        "headingHighlight": "worked.",
+        "subtitle": "My professional journey and the education behind it.",
+        "workTitle": "WORK EXPERIENCE",
+        "educationTitle": "EDUCATION",
+        "current": "Current",
+        "jobs": [
+            {
+                "role": "Software Developer",
+                "company": "Nidoos FZC LLC",
+                "location": "Sharjah, UAE",
+                "period": "Jan 2026 - Present",
+                "points": [
+                    "Built a scalable multi-vendor e-commerce platform for books and stationery with a customer storefront, vendor portal, and admin dashboard using Next.js and TypeScript.",
+                    "Integrated 150+ REST APIs powering the product catalog, cart, checkout, order tracking, and vendor inventory management across all three portals.",
+                    "Improved frontend performance by reducing redundant API calls and re-renders through centralized state management with Context API and Zustand.",
+                    "Localized the platform in Arabic and English with i18n, including full RTL/LTR layout support.",
+                    "Deployed through a CI/CD pipeline that automates build and release workflows."
+                ],
+                "tech": [
+                    "Next.js",
+                    "TypeScript",
+                    "Zustand",
+                    "REST APIs",
+                    "i18n",
+                    "CI/CD"
+                ]
+            },
+            {
+                "role": "Full Stack Developer Trainee",
+                "company": "Luminar Technolab",
+                "location": "Kerala, India",
+                "period": "May 2025 - Dec 2025",
+                "points": [
+                    "Developed full-stack web applications with React.js, Angular, Node.js, Express.js, and MongoDB, with responsive user interfaces.",
+                    "Designed RESTful APIs with secure JWT-based authentication and authorization to control access.",
+                    "Integrated third-party APIs and used Git/GitHub for version control and collaborative development."
+                ],
+                "tech": [
+                    "React.js",
+                    "Angular",
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB",
+                    "JWT"
+                ]
+            }
+        ]
+    },
+    "education": {
+        "degree1": "Master of Computer Applications (MCA)",
+        "school1": "APJ Abdul Kalam Technological University",
+        "degree2": "Bachelor of Science (BSc) in Physics",
+        "school2": "University of Calicut",
+        "location": "Kerala, India",
+        "period1": "Aug 2023 - May 2025",
+        "period2": "2020 - 2023",
+        "grade1": "CGPA: 8.92 / 10.00",
+        "grade2": "CGPA: 7.85 / 10.00"
+    },
+    "projects": {
+        "label": "04 / PROJECTS",
+        "headingStart": "Things I've",
+        "headingHighlight": "built.",
+        "inProgress": "In progress",
+        "workProject": "Work project",
+        "viewAll": "View all projects on GitHub",
+        "items": [
+            {
+                "name": "Nidoos - UAE's Bookish Marketplace",
+                "type": "Multi-vendor E-commerce",
+                "description": "Books and stationery marketplace with a customer storefront, vendor portal, and admin dashboard. Arabic and English with full RTL/LTR support.",
+                "stat": "150+ REST APIs"
+            },
+            {
+                "name": "Recipe Finder",
+                "type": "MEAN Stack Web App",
+                "description": "A recipe finder web app built on the MEAN stack, currently under development.",
+                "stat": "MEAN stack"
+            },
+            {
+                "name": "Employee Management System",
+                "type": "Enterprise Web App",
+                "description": "An employee management system with an ASP.NET Core backend and an Angular frontend, currently under development.",
+                "stat": "ASP.NET + Angular"
+            },
+            {
+                "name": "TradeFlow ERP",
+                "type": "Enterprise ERP System",
+                "description": "ERP with eight interconnected modules and role-based access using NestJS JWT Guards.",
+                "stat": "8 modules"
+            },
+            {
+                "name": "AskPDF",
+                "type": "AI PDF Assistant",
+                "description": "Summarizes PDFs and answers questions about their content using a RAG pipeline.",
+                "stat": "RAG"
+            },
+            {
+                "name": "HomeServe",
+                "type": "Home Services Platform",
+                "description": "Home services platform with JWT authentication, role-based access, and an admin dashboard.",
+                "stat": "20+ REST APIs"
+            },
+            {
+                "name": "BookStore",
+                "type": "Used Books E-commerce",
+                "description": "Marketplace with secure authentication, Stripe payments, admin approval workflows, and full CRUD.",
+                "stat": "Stripe payments"
+            }
+        ]
+    },
+     "contact": {
+    "label": "05 / CONTACT",
+    "headingStart": "Let's",
+    "headingHighlight": "talk.",
+    "description": "Have a project, an opportunity, or a question? Send me a message and I'll get back to you.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "phone": "Phone",
+    "github": "GitHub",
+    "location": "Location",
+    "formTitle": "message.js",
+    "nameLabel": "Your name",
+    "emailLabel": "Your email",
+    "messageLabel": "Message",
+    "namePlaceholder": "John Doe",
+    "emailPlaceholder": "john@example.com",
+    "messagePlaceholder": "Tell me about your project or opportunity...",
+    "sending": "Sending...",
+    "sendMessage": "Send message",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again."
+  },
+    "footer": {
+    "description": "Building clean, responsive and thoughtful web experiences.",
+    "copyright": "All rights reserved.",
+    "backToTop": "Back to top"
+  }
+}

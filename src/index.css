@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-display: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-arabic:"Noto Sans Arabic", sans-serif;
+
+  --color-bg: #0C1010;
+  --color-surface: #192120;
+  --color-accent: #78938B;
+  --color-primary: #C5F2D7;
+  --color-highlights: #B7C9BE;
+  --color-text: #EDF3EF;
+  --color-border: #2B3935;
+}
+
+/* Dark theme */
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #0C1010;
+  --color-surface: #192120;
+  --color-accent: #78938B;
+  --color-highlights: #B7C9BE;
+  --color-text: #e4faeb;
+  --color-primary: #C5F2D7;
+  --color-border: #2B3935;
+}
+
+/* Light theme */
+[data-theme="light"] {
+  color-scheme: light;
+
+  --color-bg: #F5F7F3;
+  --color-surface: #FFFFFF;
+  --color-accent: #55786B;
+  --color-highlights: #344F43;
+  --color-primary: #C5F2D7;
+  --color-text: #202B27;
+  --color-border: #DCE4DE;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+
+  body,
+  body a,
+  body button {
+    cursor: none;
+  }
+}
+
+
+/* Automatically use Arabic font */
+html[lang="ar"] body {
+  font-family: var(--font-arabic);
+}
+
+/* Keep English font */
+html[lang="en"] body {
+  font-family: var(--font-body);
+}

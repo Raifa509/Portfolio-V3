@@ -140,7 +140,7 @@ export default function HeroSection() {
 
                     <div className='origin-top scale-[0.85] min-[400px]:scale-100'>
                         <TiltedCard
-                            imageSrc="/src/assets/profile.png"
+                            imageSrc="/profile.png"
                             altText="Fathimathul Raifa Cover"
                             containerHeight="300px"
                             containerWidth="300px"

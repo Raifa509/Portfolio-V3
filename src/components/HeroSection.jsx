@@ -61,7 +61,7 @@ export default function HeroSection() {
 
                 <div className="flex md:flex-row flex-col items-center justify-center lg:justify-start gap-3">
                     <a
-                        href="/Fathimathul%20Raifa_resume.pdf"
+                        href="/Fathimathul_Raifa_Resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="items-center justify-center

@@ -10,6 +10,8 @@ import LandingPage from './pages/LandingPage'
 import ProjectsSection from './pages/ProjectSection'
 import SkillsSection from './pages/SkillsSection'
 import WhatsAppButton from './components/WhatsappButton'
+import Navbar from './components/Navbar'
+import MotionSection from './components/MotionSection'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -22,12 +24,13 @@ function App() {
         (
           <>
             <CustomCursor />
+            <Navbar />
             <LandingPage />
-            <AboutSection />
-            <SkillsSection />
-            <ExperienceSection />
-            <ProjectsSection />
-            <ContactSection />
+            <MotionSection><AboutSection /></MotionSection>
+            <MotionSection><SkillsSection /></MotionSection>
+            <MotionSection><ExperienceSection /></MotionSection>
+            <MotionSection><ProjectsSection /></MotionSection>
+            <MotionSection><ContactSection /></MotionSection>
             <Footer />
             <WhatsAppButton />
           </>

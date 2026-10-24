@@ -1,4 +1,3 @@
-
 import { ArrowUpRight, Briefcase } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
@@ -87,23 +86,18 @@ export default function ProjectsSection() {
                     {projects.map((p, index) => (
                         <article
                             key={`${p.name}-${index}`}
-                            className={`group relative flex flex-col overflow-hidden rounded-xl border border-border bg-surface p-5 transition-all duration-300 hover:-translate-y-1 hover:border-highlights/50 hover:shadow-[0_10px_30px_rgba(120,147,139,0.12)] ${
-                                p.wide ? "md:col-span-2" : ""
-                            }`}
+                            className={`group relative flex flex-col overflow-hidden rounded-xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-highlights/50 hover:shadow-[0_10px_30px_rgba(120,147,139,0.12)] ${p.wide ? "md:col-span-2" : ""
+                                }`}
                         >
-                            {/* Decorative accent */}
-                            <div className="absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-highlights transition-transform duration-500 group-hover:scale-x-100" />
-
-                            {/* Project heading */}
-                            <div className="relative flex items-start justify-between gap-3">
-                                <div>
-                                    <p className="font-mono text-[10px] text-highlights">
-                                        {p.type}
-                                    </p>
-
-                                    <h3 className="mt-1 font-heading text-base font-semibold text-primary">
-                                        {p.name}
-                                    </h3>
+                            {/* Window-style header */}
+                            <div
+                                dir="ltr"
+                                className="flex items-center justify-between gap-1.5 border-b border-border bg-surface px-4 py-3"
+                            >
+                                <div className="flex items-center gap-1.5">
+                                    <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+                                    <span className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
+                                    <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
                                 </div>
 
                                 {p.work && (
@@ -120,54 +114,74 @@ export default function ProjectsSection() {
                                     </span>
                                 )}
                             </div>
+                            {/* Decorative accent */}
+                            <div className="absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-highlights transition-transform duration-500 group-hover:scale-x-100" />
 
-                            {/* Description */}
-                            <p className="relative mt-3 text-xs leading-5 text-text/80">
-                                {p.description}
-                            </p>
+                            {/* Card body */}
+                            <div className="relative flex flex-1 flex-col p-5">
+                                {/* Project heading */}
+                                <div className="relative flex items-start justify-between gap-3">
+                                    <div>
+                                        <p className="font-mono text-[10px] text-highlights">
+                                            {p.type}
+                                        </p>
 
-                            {/* Technologies */}
-                            <div className="relative mt-4 flex flex-wrap gap-1.5">
-                                {p.tech.map((tech) => (
-                                    <span
-                                        key={tech}
-                                        className="rounded-full border border-border px-2 py-0.5 font-mono text-[10px] text-text transition-colors duration-300 hover:border-highlights hover:text-highlights"
-                                    >
-                                        {tech}
+                                        <h3 className="mt-1 font-heading text-base font-semibold text-primary">
+                                            {p.name}
+                                        </h3>
+                                    </div>
+
+
+                                </div>
+
+                                {/* Description */}
+                                <p className="relative mt-3 text-xs leading-5 text-text/80">
+                                    {p.description}
+                                </p>
+
+                                {/* Technologies */}
+                                <div className="relative mt-4 flex flex-wrap gap-1.5">
+                                    {p.tech.map((tech) => (
+                                        <span
+                                            key={tech}
+                                            className="rounded-full border border-border px-2 py-0.5 font-mono text-[10px] text-text transition-colors duration-300 hover:border-highlights hover:text-highlights"
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                {/* Project footer */}
+                                <div className="relative mt-auto flex items-center justify-between gap-3 pt-5">
+                                    <span className="font-mono text-[11px] text-accent">
+                                        {p.stat}
                                     </span>
-                                ))}
-                            </div>
 
-                            {/* Project footer */}
-                            <div className="relative mt-auto flex items-center justify-between gap-3 pt-5">
-                                <span className="font-mono text-[11px] text-accent">
-                                    {p.stat}
-                                </span>
+                                    <div className="flex items-center gap-3 text-text/70">
+                                        {p.github && (
+                                            <a
+                                                href={p.github}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                aria-label={`${p.name} on GitHub`}
+                                                className="transition-all duration-300 hover:scale-110 hover:text-button"
+                                            >
+                                                <FaGithub size={16} />
+                                            </a>
+                                        )}
 
-                                <div className="flex items-center gap-3 text-text/70">
-                                    {p.github && (
-                                        <a
-                                            href={p.github}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            aria-label={`${p.name} on GitHub`}
-                                            className="transition-all duration-300 hover:scale-110 hover:text-button"
-                                        >
-                                            <FaGithub size={16} />
-                                        </a>
-                                    )}
-
-                                    {p.live && (
-                                        <a
-                                            href={p.live}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            aria-label={`${p.name} live site`}
-                                            className="transition-all duration-300 hover:scale-110 hover:text-button"
-                                        >
-                                            <ArrowUpRight size={17} />
-                                        </a>
-                                    )}
+                                        {p.live && (
+                                            <a
+                                                href={p.live}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                aria-label={`${p.name} live site`}
+                                                className="transition-all duration-300 hover:scale-110 hover:text-button"
+                                            >
+                                                <ArrowUpRight size={17} />
+                                            </a>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </article>

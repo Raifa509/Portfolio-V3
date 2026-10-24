@@ -161,3 +161,11 @@
 .animate-float {
     animation: float 4s ease-in-out infinite;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 90px;
+}
